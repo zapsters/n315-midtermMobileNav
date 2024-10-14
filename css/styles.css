@@ -1,0 +1,242 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+}
+
+/* End of Reset */
+nav {
+  height: 90px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  padding: 0 15px;
+  gap: 30px;
+  font-family: monospace;
+  font-size: 18px;
+  color: #e6b45a;
+  border-bottom: 2px solid rgb(56, 8, 46);
+}
+nav .logo {
+  flex: 1;
+  max-height: 100%;
+  aspect-ratio: 969/492;
+}
+nav .logo .logoImg {
+  background-image: url("../assets/logos/Treble Clef Corp_transparent-.png");
+  background-size: 80%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+nav .links {
+  max-width: 500px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+nav .links a {
+  text-decoration: none;
+  color: #047704;
+}
+nav .links a:hover {
+  text-decoration: underline;
+}
+nav .links .active {
+  color: #15816c;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+nav .hamburger {
+  display: none;
+  max-height: 100%;
+  max-width: 50px;
+  cursor: pointer;
+  flex: 1;
+  background-image: url("../assets/hamburger-menu.svg");
+  background-size: auto 30%;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.mobileNav {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px 0 15px 0;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  width: 100%;
+  transform: scaleY(0);
+  transform: translate 0s linear;
+  transform-origin: top;
+  z-index: 100;
+}
+.mobileNav a {
+  color: white;
+  font-family: "Afacad Flux", sans-serif;
+}
+.mobileNav .active {
+  color: hsl(120, 100%, 80%);
+}
+
+@media (max-width: 780px) {
+  nav {
+    gap: 0;
+  }
+  nav .links {
+    display: none;
+  }
+  nav .hamburger {
+    display: block;
+  }
+}
+.home .hero {
+  height: 60vh;
+  margin: 30px;
+  background-color: red;
+  background-image: url("../assets/Concert_Band.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  image-rendering: crisp-edges;
+  position: relative;
+}
+.home .hero .overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 20px;
+  font-style: normal;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(9, 54, 121, 0.644);
+}
+.home .hero .overlay h1 {
+  font-family: "Playwrite IS", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  font-size: 60px;
+}
+.home .hero .overlay p {
+  font-family: "Playwrite IS", cursive;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 19px;
+}
+
+.instruments {
+  margin-top: 20px;
+}
+.instruments h1 {
+  text-align: center;
+  font-family: "Afacad Flux", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.instruments .instrumentList {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-evenly;
+  list-style-type: none;
+  flex-wrap: wrap;
+  max-width: 100%;
+  row-gap: 50px;
+}
+.instruments .instrumentList .instrumentItem {
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  border: 2px solid #cac6c6;
+  cursor: pointer;
+}
+.instruments .instrumentList .instrumentItem p {
+  padding: 20px 20px 0px 20px;
+  max-width: 300px;
+  text-align: left;
+  font-family: "Afacad Flux", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.instruments .instrumentList .instrumentItem img {
+  border-radius: 30px;
+  max-height: 250px;
+}
+.instruments .instrumentList .instrumentItem:hover {
+  border-color: #9e9797;
+}
+
+.about {
+  margin-top: 20px;
+}
+.about h1 {
+  text-align: center;
+  font-family: "Afacad Flux", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.about .text {
+  max-width: 600px;
+  width: 90%;
+  margin: 0 auto;
+  font-family: "Afacad Flux", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+.contact {
+  margin-top: 20px;
+}
+.contact h1 {
+  text-align: center;
+  font-family: "Afacad Flux", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.contact .text {
+  max-width: 600px;
+  width: 90%;
+  margin: 0 auto;
+  font-family: "Afacad Flux", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}

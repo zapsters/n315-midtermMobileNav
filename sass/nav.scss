@@ -1,0 +1,90 @@
+nav {
+  height: 90px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  padding: 0 15px;
+  gap: 30px;
+  font-family: monospace;
+  font-size: 18px;
+  color: #e6b45a;
+  border-bottom: 2px solid rgb(56, 8, 46);
+  .logo {
+    flex: 1;
+    max-height: 100%;
+    aspect-ratio: 969 / 492;
+    .logoImg {
+      background-image: url("../assets/logos/Treble\ Clef\ Corp_transparent-.png");
+      background-size: 80%;
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+  .links {
+    max-width: 500px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    a {
+      text-decoration: none;
+      color: #047704;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .active {
+      color: #15816c;
+      font-weight: bold;
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+    }
+  }
+  .hamburger {
+    display: none;
+    max-height: 100%;
+    max-width: 50px;
+    cursor: pointer;
+    flex: 1;
+    background-image: url("../assets/hamburger-menu.svg");
+    background-size: auto 30%;
+    background-position: right;
+    background-repeat: no-repeat;
+  }
+}
+.mobileNav {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px 0 15px 0;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  width: 100%;
+  transform: scaleY(0);
+  transform: translate 0s linear;
+  transform-origin: top;
+  z-index: 100;
+  a {
+    color: white;
+    font-family: "Afacad Flux", sans-serif;
+  }
+  .active {
+    color: hsl(120, 100%, 80%);
+  }
+}
+
+@media (max-width: 780px) {
+  nav {
+    gap: 0;
+    .links {
+      display: none;
+    }
+    .hamburger {
+      display: block;
+    }
+  }
+}
